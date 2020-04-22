@@ -163,9 +163,31 @@ a {
   width: 30%;
   min-width: 300px;
   padding: 20px;
-  background-color: rgba(75, 246, 113, 0.8);
-  -webkit-box-shadow: 10px 10px 10px rgba(12, 54, 78, 0.5);
-          box-shadow: 10px 10px 10px rgba(12, 54, 78, 0.5);
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(12, 54, 78, 0.5);
+          box-shadow: 5px 5px 5px 5px rgba(12, 54, 78, 0.5);
   margin-bottom: 50px;
+}
+
+#personal-avtivity-wrapper #personal-activity-table {
+  width: 100%;
+  border: 3px solid #4bf671;
+  border-collapse: collapse;
+}
+
+#personal-avtivity-wrapper #personal-activity-table caption {
+  font-size: 2rem;
+  margin-bottom: 4%;
+}
+
+#personal-avtivity-wrapper #personal-activity-table td, #personal-avtivity-wrapper #personal-activity-table tr, #personal-avtivity-wrapper #personal-activity-table th {
+  border: 3px solid #4bf671;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+#personal-avtivity-wrapper #personal-activity-table #result-ppm {
+  min-width: 150px;
+  min-height: 50px;
+  border: 1px solid black;
 }
 /*# sourceMappingURL=scss.css.map */
