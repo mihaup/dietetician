@@ -2,6 +2,7 @@ body html
 {
     padding: 0;
     margin:0;
+    
 }
 
 
@@ -11,12 +12,23 @@ $green: rgb(75, 246, 113);
 
 
 
-
-
+.hcenter 
+{
+    text-align: center;
+    padding: 20px;
+}
 
 a 
 {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    &:hover 
+    {
+        color:$green;
+    }
+   
 }
 
 
@@ -203,7 +215,7 @@ a
     }
 }
 
-#jestesmy-tym-co-jemy
+.overall
 {
     flex-wrap: wrap;
     width: 90%;
@@ -252,13 +264,33 @@ a
 #personal-avtivity-wrapper
 {
 
-
+    width: 100% !important;
+    text-align: center;
 
 #personal-activity-table
 {
     width: 100%;
     border: 3px solid $green;
     border-collapse: collapse;
+   
+
+    button
+    {
+        width: 100%;
+        height: 100%;
+        min-height: 40px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all .1s ease;
+
+        &:hover 
+        {
+            color: $green;
+        }
+    }
 
     caption 
     {
@@ -271,7 +303,10 @@ a
         border: 3px solid $green;
         border-collapse: collapse;
         padding: 5px;
+        
     }
+
+    
 
     #result-ppm
     {
@@ -280,9 +315,47 @@ a
         border: 1px solid black;
       
     }
+
+    .number 
+    {
+        &:hover 
+        {
+            cursor: pointer;
+        }
+    }
  
 
 
 }
 
+input 
+{
+    margin-top: 50px;
+    outline: none;
+    height: 30px;
+    font-size: 1.5rem;
+}
+
+}
+
+#procentowy-udzial-skladnikow
+{
+
+    ul 
+    {
+        width: 100%;
+        margin: 1%;
+        padding: 1px;
+        li 
+        {
+            width: 100%;
+            padding-bottom: 5px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          
+        }
+    }
+ 
 }

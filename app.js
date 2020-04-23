@@ -4,10 +4,14 @@ window.onload = function(){
 // variables
 
 const wieghtInput = document.querySelector("#tell-me-your-weight-input");
-const buttonCalculate = document.querySelector("#button-calculate");
+//const buttonCalculate = document.querySelector("#button-calculate");
 const result = document.querySelector("#result-ppm");
-const n = document.querySelector(".number");
-const go = document.getElementById("#go");
+const gor = document.querySelector("#personal-activity-table");
+
+
+
+
+
 
 
 
@@ -16,58 +20,48 @@ const go = document.getElementById("#go");
 
 // events
 
-buttonCalculate.addEventListener("click", calculate);
-
-n.addEventListener("click", numb);
-
-// functions
-
-function calculate(event){
-
-    event.preventDefault();
-
-    const x = 1;
-    const y = 24;
-    const w = wieghtInput.value;
-
-    
-  
-    const yourAnswer = x * y * w;
-
-    result.innerHTML = yourAnswer + '<span> kcal</span>';
+//buttonCalculate.addEventListener("click", calculate);
+gor.addEventListener("click", myNum);
 
 
-    
+// funtions
 
-}
+    function myNum(e){
 
-
-
-function numb(e){
-
-    const item = e.target;
-    
-    
-   
-
-
-    if (item.classList[0] === "number"){
+        event.preventDefault();
        
-
-        item.style.color = "red";
+        const x = 1;
+        const y = 24;
+        const w = wieghtInput.value;
+        const item = e.target;
+        const val = item.value;
+     
+ 
+           
+            result.innerHTML = val * x * y * w + '<span> kcal</span>';
+        
+        
     }
 
-  
-
-
-
-
-
+    
    
 
-}
+
+
+    
+
+
+
+    
+
+ 
 
 }
+
+
+
+
+
 
 
 

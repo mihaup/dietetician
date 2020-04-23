@@ -32,9 +32,9 @@
 
     <ul id="top-nav-main-ul" class="flex-row">
 
-        <li><a>Jestesmy tym co jemy</a></li>
+        <li><a href="#jestesmy-tym-co-jemy">Jestesmy tym co jemy</a></li>
 
-        <li><a>Procesy trawienia i skladniki pokarmowe</a>
+        <li><a href="#procesy-trawienia-i-skladniki-pokarmowe">Procesy trawienia i skladniki pokarmowe</a>
 
         <div class="none">
             <ul>
@@ -123,7 +123,7 @@
 </section>
 
 
-<section id="jestesmy-tym-co-jemy" class="flex-row">
+<section id="jestesmy-tym-co-jemy" class="flex-row overall">
 
 
 <h1>Jestesmy tym co jemy</h1>
@@ -248,34 +248,34 @@ diety i to kiedy spozywamy posilki.<br></h3>
 
         <tr>
             <td>Brak aktywnosci</td>
-            <td class="number">1.4</td>
-            <td class="number">1.4</td>
-            <td class="number">1.6</td>
-            <td class="number">1.5</td>
-            <td class="number">1.7</td>
-            <td class="number">1.5</td>
+            <td class="number"><button id ="btn" value="1.4">1.4</button></td>
+            <td class="number"><button id ="btn" value="1.4">1.4</button></td>
+            <td class="number"><button id ="btn" value="1.6">1.6</button></td>
+            <td class="number"><button id ="btn" value="1.5">1.5</button></td>
+            <td class="number"><button id ="btn" value="1.7">1.7</button></td>
+            <td class="number"><button id ="btn" value="1.5">1.5</button></td>
 
 
         </tr>
 
         <tr>
             <td>Umiarkowana aktywnosc</td>
-            <td class="number">1.5</td>
-            <td class="number">1.5</td>
-            <td class="number">1.5</td>
-            <td class="number">1.7</td>
-            <td class="number">1.8</td>
-            <td class="number">1.6</td>
+            <td class="number"><button id ="btn" value="1.5">1.5</button></td>
+            <td class="number"><button id ="btn" value="1.5">1.5</button></td>
+            <td class="number"><button id ="btn" value="1.5">1.5</button></td>
+            <td class="number"><button id ="btn" value="1.7">1.7</button></td>
+            <td class="number"><button id ="btn" value="1.8">1.8</button></td>
+            <td class="number"><button id ="btn" value="1.6">1.6</button></td>
         </tr>
 
         <tr>
             <td>Duza aktywnosc</td>
-            <td class="number">1.6</td>
-            <td class="number">1.6</td>
-            <td class="number">1.8</td>
-            <td class="number">1.7</td>
-            <td class="number">1.9</td>
-            <td class="number">1.7</td>
+            <td class="number"><button id ="btn" value="1.6">1.6</button></td>
+            <td class="number"><button id ="btn" value="1.6">1.6</button></td>
+            <td class="number"><button id ="btn" value="1.8">1.8</button></td>
+            <td class="number"><button id ="btn" value="1.7">1.7</button></td>
+            <td class="number"><button id ="btn" value="1.9">1.9</button></td>
+            <td class="number"><button id ="btn" value="1.7">1.7</button></td>
         </tr>
 
 
@@ -292,13 +292,98 @@ diety i to kiedy spozywamy posilki.<br></h3>
     <h3>1kcal x 24h x 55kg x 1.4 = 1848 kcal</h3>
     <p>Chcac utrzymac ta wage, kobieta powinna dostarczac okolo 1800 kcal dziennie.</p>
 
+    <h2>Wpisz wage do uzyskania oraz wybierz poziom aktywnosci aby uzyskac dzienne zaporzebowanie kaloryczne dla tej wagi.</h2>
 
 
-    <input type="text" id="tell-me-your-weight-input"><button type="submit" id="button-calculate">OK</button>
+    <label>Waga do uzyskania:</label> <input type="text" id="tell-me-your-weight-input">
     <p id="result-ppm">Halo halo ja tu jestem</p>
 
 
 </div>
+
+
+
+
+<div id="procentowy-udzial-skladnikow">
+
+    <h2>Procentowy udzial skladnikow</h2>
+
+    
+    <ul>
+        <li><a>Weglowodany 55-60%</a> <span>4kcal</span></li>
+        <li><a>Tluszcze 30%</a> <span>9kcal</span></li>
+        <li><a>Bialka 12%</a> <span>4kcal</span></li>
+    </ul>
+
+
+    <h3>Z wiekiem zapotrzebowanie energetyczne organizmu zmniejsza sie<br>
+    niezaleznie od rodzaju wykonywanej pracy. Przyjmuje sie, ze<br>
+    poczawszy od <span style="color:red;"><b>25 roku zycia do 65</b></span> roku zycia zmniejszenie to wynosi<br>
+    okolo <span style="color:red;"><b>400</b></span> kcal na dobe i zalezy od uwarunkowanego starzenia sie organizmu<br>
+    i od ogolnej aktywnosci ruchowej. Jesli nie towarzyszy temu odpowiednie<br>
+    zmniejszenie ilosci pozywienia, to nastepuje odkladanie zbednych<br>
+    substratow energetycznych w tkance tluszczowej, a tym samym<br>
+    powiekszanie sie masy ciala. Zmagazynowanie 1kg tluszczu zwiazane jest<br>
+    z dostarczeniem okolo <span style="color:red;"><b>7000 kcal</b></span> ponad rzeczywiste potrzeby organizmu.</h3>
+
+
+</div>
+
+
+
+</section>
+
+<section id="procesy-trawienia-i-skladniki-pokarmowe" class="flex-row overall">
+
+
+    <h1 class="hcenter">Procesy trawienia i skladniki pokarmowe</h1>
+
+    <div>
+    
+    <h3>Rzadko, podczas posilku, zastanawiamy sie, co wlasciwie daje nam pozywienie,<br>
+    ktore wlasnie mamy w ustach? Wiekszosc z nas swiadoma jest faktu, ze z jamy ustnej<br>
+    pokarm przelykiem powderuje do zoladka, gdzie dostanie sie do jelita cienkiego,<br>
+    gdzie nastapi jego wchloniecie. Ale co tak naprawde dzieje sie w jelitach?<br>
+    Co nasz organizm przyswaja z tego, co uprzednio znajdowalo sie na naszym talerzu?</h3>    
+    
+    </div>
+
+
+    <div>
+
+        <h3>Co sie dzieje z pokarmem?</h3>
+        <h4>Zostaje rozlozony:</h4>
+
+        <ul>
+            <li><a>Zebami - gryz conajmniej 32 razy kazdy kes (wstepny rozpad polisacharydow - wielocukrow)</a></li>
+            <li>Przez przelyk do zoladka - trawienie bialek i tluszczow</li>
+
+
+
+        </ul>
+
+    </div>
+
+    <div id="jama-ustna">
+
+        <h3>W slinie produkowanej przez gruczoly zwane sliniankami,<br>
+        zawarte sa dwa enzymy trawienne - <a>amylaza</a> i <a>maltaza</a>. Obydwa enzymy<br>
+    naleza do grupy <a>glikozydaz</a>, czyli inaczej mowiac enzymow<br>
+        rozbijajacych wiazania glikozydowe wystepujace w <a>polisacharydach</a><br>
+        (wielocukrach). I tak pod wplywem amylazy, <a>glikogen</a> i skrobia<br>
+        ulegaja rozpadowi do <a>amylopektyn</a> (mniejszych czastek je budujacych<br>
+        i <a>maltozy</a> (prostego dwucukru zbudowanego z dwoch czasteczek glukozy).<br>
+        Maltoza zas dzieki obecnosci maltazy rozkladana jest na czesci pierwsze,<br>
+        czyli na dwie czastki glukozy:
+        
+        <br><p><a>skrobia</a> + <a>amylaza</a> ---> <a>amylopektyny</a> + <a>maltoza</a></p>
+    
+        <br><p><a>glikogen</a> + amylaza ---> amylopektyny + maltoza</p>
+
+        <br><p><a>maltoza</a> + maltaza ---> 2 <a>glukozy</a></p>
+        </h3>
+
+    </div>
 
 
 

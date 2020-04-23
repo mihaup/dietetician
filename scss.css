@@ -3,8 +3,19 @@ body html {
   margin: 0;
 }
 
+.hcenter {
+  text-align: center;
+  padding: 20px;
+}
+
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #4bf671;
 }
 
 .flex-row {
@@ -133,14 +144,14 @@ a {
   margin-left: 10%;
 }
 
-#main-wrapper #jestesmy-tym-co-jemy {
+#main-wrapper .overall {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
 }
 
-#main-wrapper #jestesmy-tym-co-jemy h1 {
+#main-wrapper .overall h1 {
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -149,16 +160,16 @@ a {
   border-bottom: 1px solid black;
 }
 
-#main-wrapper #jestesmy-tym-co-jemy h2 {
+#main-wrapper .overall h2 {
   padding: 20px;
 }
 
-#main-wrapper #jestesmy-tym-co-jemy h3 {
+#main-wrapper .overall h3 {
   line-height: 1.5;
   padding: 20px;
 }
 
-#main-wrapper #jestesmy-tym-co-jemy div {
+#main-wrapper .overall div {
   margin: 0 auto;
   width: 30%;
   min-width: 300px;
@@ -168,10 +179,32 @@ a {
   margin-bottom: 50px;
 }
 
+#personal-avtivity-wrapper {
+  width: 100% !important;
+  text-align: center;
+}
+
 #personal-avtivity-wrapper #personal-activity-table {
   width: 100%;
   border: 3px solid #4bf671;
   border-collapse: collapse;
+}
+
+#personal-avtivity-wrapper #personal-activity-table button {
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+#personal-avtivity-wrapper #personal-activity-table button:hover {
+  color: #4bf671;
 }
 
 #personal-avtivity-wrapper #personal-activity-table caption {
@@ -189,5 +222,38 @@ a {
   min-width: 150px;
   min-height: 50px;
   border: 1px solid black;
+}
+
+#personal-avtivity-wrapper #personal-activity-table .number:hover {
+  cursor: pointer;
+}
+
+#personal-avtivity-wrapper input {
+  margin-top: 50px;
+  outline: none;
+  height: 30px;
+  font-size: 1.5rem;
+}
+
+#procentowy-udzial-skladnikow ul {
+  width: 100%;
+  margin: 1%;
+  padding: 1px;
+}
+
+#procentowy-udzial-skladnikow ul li {
+  width: 100%;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=scss.css.map */
