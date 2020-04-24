@@ -1,16 +1,64 @@
-body html
+body, html
 {
     padding: 0;
     margin:0;
+    scroll-behavior: smooth;
+    
     
 }
 
 
 $green: rgb(75, 246, 113);
 
+.animate
+{
+    transition: all .1s ease-in-out;
+    scroll-behavior: smooth;
+    
+
+}
+
+#go-up 
+{
+    position: fixed;
+    right: 2%;
+    bottom: 30px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid $green;
+    font-size: 1.1em;
+    transition: all .3s ease-in-out;
+  
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+
+    &:hover 
+    {
+        background-color: $green;
 
 
+        a 
+        {
+            color: #fff;
+            pointer-events: all;
+        }
 
+    }
+
+    a 
+    {
+        font-weight: 500;
+        color: black;
+
+    }
+
+ 
+
+   
+}
 
 .hcenter 
 {
@@ -23,6 +71,7 @@ a
     cursor: pointer;
     text-decoration: none;
     color: black;
+    
 
     &:hover 
     {
@@ -47,6 +96,7 @@ a
     flex-direction: column;
     justify-content: center;
     align-content: center;
+  
 }
 
 .none
@@ -197,6 +247,7 @@ a
 
 #main-wrapper 
 { margin-top: 20%;
+   
 
 
 #welcome
@@ -246,15 +297,19 @@ a
     div
     {
         margin:0 auto;
-        width: 30%;
-        min-width: 300px;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
         padding:20px;
         //background-color: rgba(75, 246, 113, 0.8);
         box-shadow: 5px 5px 5px 5px rgba(12,54,78,0.5);
         margin-bottom: 50px;
+
        
         
     }
+
+ 
 
 }
 
@@ -339,7 +394,7 @@ input
 }
 
 #procentowy-udzial-skladnikow
-{
+{ text-align: left;
 
     ul 
     {
@@ -349,11 +404,17 @@ input
         li 
         {
             width: 100%;
-            padding-bottom: 5px;
+            padding-bottom: 15px;
             margin: 0 auto;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            
+            
+            span 
+            {
+                padding-right: 70%;
+            }
           
         }
     }
