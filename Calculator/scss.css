@@ -41,4 +41,12 @@ table {
 .no-events {
   pointer-events: none;
 }
+
+.padding {
+  padding: 10px;
+}
+
+i {
+  color: red;
+}
 /*# sourceMappingURL=scss.css.map */
