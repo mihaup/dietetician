@@ -23,7 +23,8 @@ const months = {
 
 const asparagus = {
     name: "Asparagus",
-    season: [months.april, months.may, months.june]
+    season: [months.april, months.may, months.june],
+    kcal: [22]
     
 
  };

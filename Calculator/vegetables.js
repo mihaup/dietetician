@@ -64,8 +64,10 @@ function addMe(e){
     }
 
     const asparagusSeasonLength = vegetables.asparagus.season.length;
+    const kcalLength = vegetables.asparagus.kcal.length;
     const aubergineSeasonLength = vegetables.aubergine.season.length;
     const beetrootSeasonLength = vegetables.beetroot.season.length;
+
     
 
 
@@ -86,7 +88,7 @@ function addMe(e){
     if (vegNameLower === "asparagus"){
 
 
-    for(i=0;i<asparagusSeasonLength;i++)
+    for(i=0;i<asparagusSeasonLength + kcalLength;i++)
     {
 
     var div = document.createElement('span');
@@ -100,6 +102,7 @@ function addMe(e){
         w[1].innerHTML = vegetables.asparagus.season[0];
         w[2].innerHTML = vegetables.asparagus.season[1];
         w[3].innerHTML = vegetables.asparagus.season[2];
+        w[4].innerHTML = "<span>kcal</span> " + vegetables.asparagus.kcal;
 
         
 
