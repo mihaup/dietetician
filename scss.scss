@@ -18,6 +18,18 @@ $green: rgb(75, 246, 113);
 
 }
 
+.smooth-opacity-zero
+{
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.smooth-opacity-one
+{
+    transition: all .3s ease-in-out;
+    opacity: 1;
+}
+
 #go-up 
 {
     position: fixed;

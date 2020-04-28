@@ -10,6 +10,18 @@ body, html {
   scroll-behavior: smooth;
 }
 
+.smooth-opacity-zero {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.smooth-opacity-one {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 1;
+}
+
 #go-up {
   position: fixed;
   right: 2%;
