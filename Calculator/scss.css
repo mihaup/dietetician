@@ -49,4 +49,12 @@ table {
 i {
   color: red;
 }
+
+.opacity-zero {
+  opacity: 0;
+}
+
+button {
+  cursor: pointer;
+}
 /*# sourceMappingURL=scss.css.map */

@@ -9,15 +9,28 @@ const btnAsparagus = document.querySelector("#asparagus-button");
 const btnAubergine = document.querySelector("#aubergine-button");
 const btnBeetroot = document.querySelector("#beetroot-button");
 const content = document.querySelector(".content");
+const sumaHTML = document.querySelector(".suma");
+
+const btnSuma = document.createElement("button");
 
 
+const vegetablesList = [btnAsparagus, btnAubergine, btnBeetroot];
 
 
 //events
 
-btnAsparagus.addEventListener("click", addMe,true);
-btnAubergine.addEventListener("click",addMe,true);
-btnBeetroot.addEventListener("click", addMe, true);
+vegetablesList.forEach(addEventHere); 
+
+    
+function addEventHere(index){
+
+    index.addEventListener("click", addMe,true);
+};
+
+
+//btnAsparagus.addEventListener("click", addMe,true);
+//btnAubergine.addEventListener("click",addMe,true);
+//btnBeetroot.addEventListener("click", addMe, true);
 
 
 
@@ -28,6 +41,10 @@ btnBeetroot.addEventListener("click", addMe, true);
 //functions
 
 function addMe(e){
+
+
+
+
 
     const target = e.target;
 
@@ -75,45 +92,96 @@ function addMe(e){
 
 
     const w = newElement.childNodes;
-    console.log(w);
+    //console.log(w);
 
 
 
-    console.log(c[0].value);
+    //console.log(c[0].value);
     const vegName = c[0].value;
     const vegNameLower = vegName.toLowerCase();
+
+    const kcalSpan = document.createElement("span");
+    const kcalInput = document.createElement("input");
+
+
+
+    const quantitySpanWrapper = document.createElement("span");
+    const quantitySpan = document.createElement("span");
+    const quantityInput = document.createElement("input");
+    quantityInput.type = "number";
+
+    quantitySpan.innerHTML = "Gram used: ";
+
+
+    quantitySpanWrapper.appendChild(quantitySpan);
+    quantitySpanWrapper.appendChild(quantityInput);
+
+   
+
 
     
 
     if (vegNameLower === "asparagus"){
 
 
-    for(i=0;i<asparagusSeasonLength + kcalLength;i++)
+    for(i=0;i<asparagusSeasonLength + kcalLength + 1;i++) 
     {
 
     var div = document.createElement('span');
     div.classList.add("padding");
     newElement.appendChild(div);
+    
+    
 
     
         
     }
 
+        
+
         w[1].innerHTML = vegetables.asparagus.season[0];
         w[2].innerHTML = vegetables.asparagus.season[1];
         w[3].innerHTML = vegetables.asparagus.season[2];
-        w[4].innerHTML = "<span>kcal</span> " + vegetables.asparagus.kcal;
+
+       
+        
+        
+
+        kcalSpan.innerHTML = "22 kcal";
+
+
+        kcalInput.type="checkbox";
+        kcalInput.value = "22";
+        kcalInput.classList.add("opacity-zero");
+        
+        
+        
+        w[4].appendChild(kcalSpan);
+        w[5].appendChild(kcalInput);  
+        w[5].appendChild(quantitySpanWrapper);
+
+     
+      
+        
+        
+       
+        
+        
+        
+        
 
         
 
 
 
     }
+
+    
  
     if (vegNameLower === "aubergine"){
 
 
-        for(i=0;i<aubergineSeasonLength;i++)
+        for(i=0; i<aubergineSeasonLength+kcalLength+1; i++)
         {
     
         var div = document.createElement('span');
@@ -130,15 +198,33 @@ function addMe(e){
         w[4].innerHTML = vegetables.aubergine.season[3];
         w[5].innerHTML = vegetables.aubergine.season[4];
 
+
+        kcalSpan.innerHTML = "22 kcal";
+
+
+        kcalInput.type="checkbox";
+        kcalInput.value = "22";
+        kcalInput.classList.add("opacity-zero");
+        
+        
+        
+        
+        w[6].appendChild(kcalSpan);
+        w[7].appendChild(kcalInput);  
+        w[7].appendChild(quantitySpanWrapper);
+
+
+
+
     }
 
 
-
+   
     
     if (vegNameLower === "beetroot"){
 
 
-        for(i=0;i<beetrootSeasonLength;i++)
+        for(i=0;i<beetrootSeasonLength+kcalLength+1;i++)
         {
     
         var div = document.createElement('span');
@@ -155,6 +241,25 @@ function addMe(e){
         w[4].innerHTML = vegetables.beetroot.season[3];
         w[5].innerHTML = vegetables.beetroot.season[4];
         w[6].innerHTML = vegetables.beetroot.season[5];
+
+
+        
+        kcalSpan.innerHTML = "22 kcal";
+
+
+        kcalInput.type="checkbox";
+        kcalInput.value = "22";
+        kcalInput.classList.add("opacity-zero");
+        
+        
+        
+        w[7].appendChild(kcalSpan);
+        w[8].appendChild(kcalInput); 
+        w[8].appendChild(quantitySpanWrapper);
+
+
+
+
         
 
     }
@@ -180,7 +285,7 @@ function addMe(e){
 
     
 
-    target.classList.remove("choosen");
+    
 
 
     function remover()
@@ -192,9 +297,112 @@ function addMe(e){
 
     }
 
+    
+
+    
+   sum();
+  
+    function sum(){
+
+        
+        const sumaParagraph = document.createElement("input");
+        sumaParagraph.type="number";
+        sumaHTML.appendChild(sumaParagraph);
+        
+        //const aubergineAdding = quantitySpanWrapper.childNodes[1].value;
+
+        
+
+        
+        console.log(sumaHTML);
+
+
+        
+        
+
+        
+
+        sumaHTML.appendChild(btnSuma);
+        btnSuma.type="submit";
+        btnSuma.innerHTML = "Add All";
+
+
+        btnSuma.addEventListener("click", adder, true);
+
+        function adder(){
+
+            const addThis = quantitySpanWrapper.childNodes[1].value;
+
+            Number(addThis);
+
+            
+            
+               
+             
+
+                
+
+                sumaParagraph.value = addThis;
+
+             
+                    
+                    
+                
+    {
+
+    
+    
+    
+
+    
+        
+    }
+                
+
+
+                //const x = 
+
+                //console.log(sumachild[1]);
+
+            
+        
+
+            
+
+        }
+
+            
+
+        
+
+        
+
+         
+           
+
+            
+           
+        
+    }
+
+   
+    
+
+
+    target.classList.remove("choosen");
+   
 
 
 }
+
+    
+    // button call to axtion - adding kcal
+
+
+    
+
+
+
 
 
 
