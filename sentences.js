@@ -7,7 +7,8 @@ window.onload = function(){
     "Proste prawo zachowania energii przestanie obowiazywac. Nie mozesz pedzic i jednoczesnie byc skutecznym, mozesz jedynie byc wydajnym",
     "Aby dany proces przebiegal wlasciwie,powinienes usiasc, wysluchac innych i zastanowic sie nad nim.",
     "Zatrzymaj sie, poddaj wszystko analizie i sporzadz plan dzialania.",
-    "Znalezienie tempa oznacza celowosc dzialania i skupienie uwagi"];
+    "Znalezienie tempa oznacza celowosc dzialania i skupienie uwagi",
+    "Zeby radzic sobie z problemem, musisz go uchwycic, zeby go uchwycic, musisz go nazwac"];
 
     const tableLength = table.length;
 

@@ -14,12 +14,21 @@ const sumaHTML = document.querySelector(".suma");
 const btnSuma = document.createElement("button");
 
 
+
+
 const vegetablesList = [btnAsparagus, btnAubergine, btnBeetroot];
+
+const sumaParagraph = document.createElement("input");
+sumaParagraph.classList.add("suma-input");
+const sumaHTMLchild = sumaHTML.childNodes;
+
+const body = document.getElementsByName("body");
 
 
 //events
 
 vegetablesList.forEach(addEventHere); 
+btnSuma.addEventListener("click", adder, true);
 
     
 function addEventHere(index){
@@ -44,7 +53,7 @@ function addMe(e){
 
 
 
-
+    
 
     const target = e.target;
 
@@ -164,7 +173,12 @@ function addMe(e){
       
         
         
+        quantitySpanWrapper.classList.add("asparagus-input");
+        
        
+
+
+        //console.log(sumaHTMLchild[1]);
         
         
         
@@ -214,7 +228,7 @@ function addMe(e){
         w[7].appendChild(quantitySpanWrapper);
 
 
-
+        quantitySpanWrapper.classList.add("aubergine-input");
 
     }
 
@@ -259,7 +273,8 @@ function addMe(e){
 
 
 
-
+        quantitySpanWrapper.classList.add("beetroot-input");
+        
         
 
     }
@@ -282,7 +297,7 @@ function addMe(e){
 
     removeBtn.addEventListener("click", remover);
     
-
+    
     
 
     
@@ -290,7 +305,9 @@ function addMe(e){
 
     function remover()
     {
+
         newElement.remove();
+   
         c[0].checked = false;
         c[2].addEventListener("click",addMe,true);
 
@@ -298,78 +315,18 @@ function addMe(e){
     }
 
     
-
     
-   sum();
-  
-    function sum(){
-
-        
-        const sumaParagraph = document.createElement("input");
-        sumaParagraph.type="number";
-        sumaHTML.appendChild(sumaParagraph);
-        
-        //const aubergineAdding = quantitySpanWrapper.childNodes[1].value;
-
-        
-
-        
-        console.log(sumaHTML);
-
-
-        
-        
-
-        
-
+    
         sumaHTML.appendChild(btnSuma);
         btnSuma.type="submit";
         btnSuma.innerHTML = "Add All";
+        sumaParagraph.type="number";
+        sumaHTML.appendChild(sumaParagraph);
 
 
-        btnSuma.addEventListener("click", adder, true);
-
-        function adder(){
-
-            const addThis = quantitySpanWrapper.childNodes[1].value;
-
-            Number(addThis);
-
-            
-            
-               
-             
-
-                
-
-                sumaParagraph.value = addThis;
-
-             
-                    
-                    
-                
-    {
-
-    
-    
-    
-
-    
-        
-    }
-                
-
-
-                //const x = 
-
-                //console.log(sumachild[1]);
-
-            
         
 
-            
-
-        }
+      
 
             
 
@@ -378,8 +335,9 @@ function addMe(e){
         
 
          
-           
+      
 
+        target.classList.remove("choosen");
             
            
         
@@ -388,8 +346,46 @@ function addMe(e){
    
     
 
+    function adder(){
 
-    target.classList.remove("choosen");
+        const asparagusInput =   document.querySelector(".asparagus-input");
+        const aubergineInput =   document.querySelector(".aubergine-input");
+        const beetrootInput =   document.querySelector(".beetroot-input");
+        const asparagusInputValue = asparagusInput.childNodes[1].value; 
+        const aubergineInputValue = aubergineInput.childNodes[1].value; 
+        const beetrootInputValue = beetrootInput.childNodes[1].value; 
+        const sumaInput = document.querySelector(".suma-input");
+
+
+        const valueList = [asparagusInputValue, aubergineInputValue, beetrootInputValue];
+        const valueListLength = valueList.length;
+
+       // for(i=0; i<valueListLength; i++){
+            
+            
+        //}
+
+        
+
+          
+
+        
+
+        
+            
+            
+           sumaInput.value = asparagusInputValue * aubergineInputValue * beetrootInputValue;
+        
+                    
+       
+
+
+
+
+
+
+
+}
    
 
 
@@ -407,4 +403,3 @@ function addMe(e){
 
 
 
-}
